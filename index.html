@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="style.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax.libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -48,17 +48,65 @@
         <section class="hero" id="home">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title animate-on-scroll fade-in-down">Custom SaaS Platforms to Scale Your Business.</h1>
+                    <h1 class="hero-title animate-on-scroll fade-in-down">Custom <span>SaaS Platforms</span> to Scale Your Business.</h1>
                     <p class="hero-description animate-on-scroll fade-in-up" style="transition-delay: 0.2s;">
                         EvoMind Technologies builds powerful, scalable Software as a Service (SaaS) solutions. We turn your unique business logic into AI-powered platforms that boost sales and automate growth.
                     </p>
                     <div class="hero-buttons animate-on-scroll fade-in-up" style="transition-delay: 0.4s;">
-                        <a href="#services" class="btn btn-primary">Our SaaS Services</a>
+                        <a href="#services" class="btn btn-primary">Our SaaS Services <i class="fas fa-arrow-right" style="margin-left:10px;"></i></a>
                         <a href="#contact" class="btn btn-secondary">Schedule a Call</a>
                     </div>
                 </div>
                 <div class="hero-image animate-on-scroll fade-in-up" style="transition-delay: 0.3s;">
-                    <img src="https://placehold.co/600x450/23408e/ffffff/png?font=poppins&text=EvoMind+SaaS+%0ADynamic+Solutions" alt="Modern SaaS Platform Interface" aria-hidden="true">
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+                            <!-- Background Circles -->
+                            <circle cx="250" cy="225" r="180" fill="var(--primary-blue)" opacity="0.03" class="hero-bg-pulse"/>
+                            
+                            <!-- Robot Mascot Body -->
+                            <g class="robot-mascot">
+                                <!-- Head -->
+                                <rect x="180" y="100" width="140" height="110" rx="25" fill="var(--primary-blue)" class="robot-head-bob"/>
+                                <!-- Eyes -->
+                                <circle cx="215" cy="145" r="15" fill="white" class="eye-blink"/>
+                                <circle cx="285" cy="145" r="15" fill="white" class="eye-blink"/>
+                                <circle cx="218" cy="148" r="7" fill="var(--primary-blue-dark)"/>
+                                <circle cx="288" cy="148" r="7" fill="var(--primary-blue-dark)"/>
+                                <!-- Smile -->
+                                <path d="M 220 175 Q 250 195 280 175" stroke="white" stroke-width="3" fill="none" class="robot-smile-wag"/>
+                                <!-- Antennas -->
+                                <line x1="250" y1="100" x2="250" y2="60" stroke="var(--primary-blue)" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="250" cy="55" r="8" fill="var(--accent-blue)" class="antenna-glow"/>
+                                
+                                <!-- Body -->
+                                <path d="M 160 215 L 340 215 Q 350 215 350 225 L 350 330 Q 350 345 330 345 L 170 345 Q 150 345 150 330 L 150 225 Q 150 215 160 215 Z" fill="var(--primary-blue-dark)"/>
+                                <!-- Screen on Chest -->
+                                <rect x="180" y="235" width="140" height="80" rx="10" fill="var(--primary-blue)" opacity="0.8"/>
+                                <rect x="195" y="250" width="30" height="6" rx="3" fill="var(--accent-blue)" class="code-line-mock"/>
+                                <rect x="195" y="265" width="60" height="6" rx="3" fill="white" opacity="0.4" class="code-line-mock"/>
+                                <rect x="195" y="280" width="45" height="6" rx="3" fill="white" opacity="0.4" class="code-line-mock"/>
+                                
+                                <!-- Arms -->
+                                <g class="arm-left">
+                                    <path d="M 150 240 L 90 280 Q 70 295 85 310" stroke="var(--primary-blue-dark)" stroke-width="25" stroke-linecap="round" fill="none"/>
+                                    <circle cx="85" cy="305" r="15" fill="var(--accent-blue)"/>
+                                </g>
+                                <g class="arm-right">
+                                    <path d="M 350 240 L 410 280 Q 430 295 415 310" stroke="var(--primary-blue-dark)" stroke-width="25" stroke-linecap="round" fill="none"/>
+                                    <circle cx="415" cy="305" r="15" fill="var(--accent-blue)"/>
+                                </g>
+                            </g>
+                            
+                            <!-- Floating SaaS Elements -->
+                            <g class="saas-icons">
+                                <rect x="60" y="100" width="40" height="40" rx="10" fill="var(--accent-blue)" class="float-saas-1">
+                                    <i class="fas fa-code"></i>
+                                </rect>
+                                <circle cx="440" cy="120" r="25" fill="#34d399" class="float-saas-2"/>
+                                <path d="M 400 380 L 440 380 L 420 350 Z" fill="#fbbf24" class="float-saas-3"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
@@ -114,7 +162,40 @@
                     <a href="#contact" class="btn btn-primary">Book a Strategy Call</a>
                 </div>
                 <div class="about-image animate-on-scroll fade-in-right">
-                    <img src="https://placehold.co/600x450/f0f4f9/1e293b/png?font=poppins&text=Our+Team+%0ACollaborating" alt="EvoMind Team Collaboration" aria-hidden="true">
+                    <div class="about-illustration">
+                        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="team-svg">
+                            <!-- Background Circles -->
+                            <circle cx="250" cy="200" r="160" fill="var(--primary-blue)" opacity="0.05" class="bg-circle-slow"/>
+                            <circle cx="250" cy="200" r="120" fill="var(--accent-blue)" opacity="0.08" class="bg-circle-fast"/>
+                            
+                            <!-- Team Characters -->
+                            <!-- Character 1 (Developer) -->
+                            <g class="character char-1">
+                                <circle cx="180" cy="180" r="35" fill="#f5d0a9"/> <!-- Head -->
+                                <path d="M 150 250 Q 180 220 210 250 L 220 320 L 140 320 Z" fill="var(--primary-blue)"/> <!-- Body -->
+                                <rect x="160" y="160" width="40" height="15" fill="#334155" rx="5"/> <!-- Glasses -->
+                            </g>
+                            
+                            <!-- Character 2 (Analyst) -->
+                            <g class="character char-2">
+                                <circle cx="320" cy="170" r="35" fill="#ffe0bd"/> <!-- Head -->
+                                <path d="M 290 240 Q 320 210 350 240 L 360 310 L 280 310 Z" fill="var(--accent-blue)"/> <!-- Body -->
+                            </g>
+                            
+                            <!-- Central Idea/Collaboration -->
+                            <g class="collaboration-elements">
+                                <circle cx="250" cy="120" r="15" fill="#fbbf24" class="idea-bulb">
+                                    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+                                </circle>
+                                <path d="M 210 180 Q 250 150 290 180" stroke="var(--accent-blue)" stroke-width="3" fill="none" stroke-dasharray="5,5" class="connection-line"/>
+                                
+                                <!-- Floating Data Nodes -->
+                                <rect x="220" y="240" width="15" height="15" rx="3" fill="var(--primary-blue)" class="floating-node node-1"/>
+                                <rect x="265" y="220" width="12" height="12" rx="6" fill="var(--accent-blue)" class="floating-node node-2"/>
+                                <path d="M 240 280 L 260 280 L 250 265 Z" fill="#34d399" class="floating-node node-3"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,24 +217,31 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                             <div>
                                 <strong>Phone:</strong>
                                 <a href="tel:9322330000">9322330000</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope-open-text"></i>
                             <div>
                                 <strong>Email:</strong>
-                                <a href="mailto:info@evomind.tech">info@evomind.tech</a>
+                                <a href="mailto:zaidchoudhary090@gmail.com">zaidchoudhary090@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marked-alt"></i>
                             <div>
                                 <strong>Address:</strong>
-                                <span>Malad west, Mumbai-400095</span>
+                                <span>
+                                    <a href="https://maps.app.goo.gl/ndzfqueJgmjCa7yX8" target="_blank" rel="noopener">
+                                        RWG 160, Shri Sevantilal Khandwala Marg, Kandivali West, Mumbai 400067
+                                    </a>
+                                </span>
+                                <div class="map-container" style="margin-top:1rem; border-radius:15px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.874347229809!2d72.82570087525588!3d19.200689748046162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7862449dffd%3A0xb995a8358bb07ca7!2sEvomind%20Technologies!5e0!3m2!1sen!2sin!4v1776365354047!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,41 +270,108 @@
 </form>
             </div>
         </section>
+
+        <!-- Stats Section Animated -->
+        <section class="stats-section" id="stats">
+            <div class="container stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-rocket"></i>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" data-count="300">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-text">Awards Won</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="container footer-container">
-            <div class="footer-logo">
-                <h3 class="footer-title">EvoMind</h3>
-                <span class="footer-subtitle">TECHNOLOGIES</span>
+            <div class="footer-brand">
+                <div class="footer-logo-premium">
+                    <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                    <div>
+                        <h3 class="footer-title">EvoMind</h3>
+                        <span class="footer-subtitle">TECHNOLOGIES</span>
+                    </div>
+                </div>
+                <p class="brand-description">Empowering enterprises with intelligence. We craft high-performance SaaS solutions that redefine industries through AI and seamless user experiences.</p>
+                <div class="footer-social-premium">
+                    <a href="https://www.linkedin.com/in/zaid-choudhary-29b176167/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/zaid090" target="_blank" rel="noopener" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/evomindtechnologies/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
             
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#services">SaaS Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>info@evomind.tech</p>
-                <p>9322330000</p>
-                <p>Malad west, Mumbai-400095</p>
-            </div>
-            
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <div class="footer-nav-group">
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#stats">Success Metrics</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Core Services</h4>
+                    <ul>
+                        <li><a href="#">SaaS Development</a></li>
+                        <li><a href="#">AI Integration</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">Strategy Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-premium">
+                    <h4>Direct Contact</h4>
+                    <div class="contact-card">
+                        <div class="contact-pill">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:zaidchoudhary090@gmail.com">zaidchoudhary090@gmail.com</a>
+                        </div>
+                        <div class="contact-pill">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:9322330000">+91 93223 30000</a>
+                        </div>
+                        <p class="location-text">
+                            <i class="fas fa-map-marker-alt"></i>
+                            RWG 160, Kandivali West, Mumbai
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 EvoMind Technologies. All Rights Reserved.</p>
+
+        <div class="footer-bottom-premium">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2024 EvoMind Technologies. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll up button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
     <script src="script.js"></script>
 </body>

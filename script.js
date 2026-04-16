@@ -1,37 +1,11 @@
-/* ======== MOBILE NAVIGATION MENU ======== */
-const navMenu = document.getElementById('nav-menu');
+// Toggle menu and header scroll effect
+const header = document.querySelector('.header');
 const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Function to show the menu
-const showMenu = () => {
-    navMenu.classList.add('nav-active');
-    navToggle.innerHTML = '<i class="fas fa-times"></i>'; // Change icon to 'X'
-};
-
-// Function to hide the menu
-const hideMenu = () => {
-    navMenu.classList.remove('nav-active');
-    navToggle.innerHTML = '<i class="fas fa-bars"></i>'; // Change icon to 'bars'
-};
-
-// Toggle menu on click
-navToggle.addEventListener('click', () => {
-    if (navMenu.classList.contains('nav-active')) {
-        hideMenu();
-    } else {
-        showMenu();
-    }
-});
-
-// Hide menu when a nav link is clicked (for single-page-app feel)
-navLinks.forEach(link => {
-    link.addEventListener('click', hideMenu);
-});
-
-// Add a shadow to header on scroll
+// Header scroll effect
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
     if (window.scrollY > 50) {
         header.classList.add('header-scrolled');
     } else {
@@ -39,33 +13,77 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-/* ======== NEW: SCROLL ANIMATIONS ======== */
-// This is the Intersection Observer API
-
-const observerOptions = {
-    root: null, // observes in relation to the viewport
-    rootMargin: '0px',
-    threshold: 0.1 // 10% of the element must be visible
-};
-
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        // When the element is in view
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target); // Stop observing once animated
+// Smooth scroll to top button
+const scrollTopBtn = document.getElementById('scrollTop');
+if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
         }
     });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Intersect Observer for scroll animations
+const observerOptions = {
+    threshold: 0.1
 };
 
-// Create the observer
-const observer = new IntersectionObserver(observerCallback, observerOptions);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            if (entry.target.classList.contains('stats-section')) {
+                animateNumbers();
+            }
+        }
+    });
+}, observerOptions);
 
-// Select all elements with the .animate-on-scroll class
-const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-
-// Observe each element
-elementsToAnimate.forEach(el => {
+document.querySelectorAll('.animate-on-scroll, .stats-section').forEach(el => {
     observer.observe(el);
 });
+
+// Function to animate numbers
+function animateNumbers() {
+    const numbers = document.querySelectorAll('.stat-number');
+    numbers.forEach((num) => {
+        const target = +num.getAttribute('data-count');
+        let count = 0;
+        const increment = target / 50;
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                num.innerText = Math.ceil(count);
+                setTimeout(updateCount, 20);
+            } else {
+                num.innerText = target + "+";
+            }
+        };
+        updateCount();
+    });
+}
+
+// Mobile Nav Toggle
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        const isActive = navMenu.classList.toggle('nav-active');
+        navToggle.innerHTML = isActive ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close menu on link click
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('nav-active');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+}
